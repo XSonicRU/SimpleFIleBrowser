@@ -69,6 +69,8 @@ public class Browser {
 
     private static String[] readalldirectory(String path) {
         File f = new File(path);
-        return f.list();
+		String[] list = f.list();
+		Arrays.sort(list);
+        return list;
     }
 }
